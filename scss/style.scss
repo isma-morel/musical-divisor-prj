@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import './base/list';
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+section {
+    background-image: url('https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    .container-notes {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        color: white;
+        h1 {
+            position: relative;
+            z-index: 9999;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        span {
+            padding: 0 20px;
+            position: relative;
+            z-index: 9999;
+            font-weight: bold;
+            color: rosybrown;
+            font-size: 30px;
+        }
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .container-keys {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .key {
+            position: relative;
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                opacity: 0.6;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            h2 {
+                position: relative;
+                z-index: 9999;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+            }
+            span {
+                text-align: center;
+                padding: 20px;
+                display: block;
+                height: 40px;
+                width: 40px;
+                color: gray;
+                font-size: 30px;
+                font-weight: bold;
+                border: 3px solid gray;
+                position: relative;
+                z-index: 9999;
+                transition: .2s ease all;
+            }
+            .active {
+                color: white;
+                transform: scale(1.1);
+                border: 3px solid rgb(247, 231, 144);
+            }
+        }
+    }
+}
